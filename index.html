@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Settings Bar -->
+        <div class="settings-bar">
+            <button id="darkModeBtn" class="btn-icon" title="Toggle Dark Mode">🌙</button>
+        </div>
+
+        <!-- Greeting Section -->
+        <div class="greeting-card">
+            <div class="name-input-container">
+                <input type="text" id="nameInput" class="name-input" placeholder="Enter your name">
+            </div>
+            <h1 id="greeting">Good Afternoon</h1>
+            <div class="datetime">
+                <p id="time" class="time"></p>
+                <p id="date" class="date"></p>
+            </div>
+        </div>
+
+        <main class="dashboard">
+            <!-- Focus Timer -->
+            <section class="card timer-card">
+                <h2>Focus Timer</h2>
+                <div class="timer-settings">
+                    <label>Duration (min):</label>
+                    <input type="number" id="timerDuration" min="1" max="60" value="25">
+                </div>
+                <div id="timerDisplay" class="timer-display">25:00</div>
+                <div class="timer-controls">
+                    <button id="startBtn">Start</button>
+                    <button id="stopBtn">Pause</button>
+                    <button id="resetBtn">Reset</button>
+                </div>
+            </section>
+
+            <!-- To-Do List -->
+            <section class="card todo-card">
+                <h2>To-Do List</h2>
+                <div class="todo-input">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <button id="addTaskBtn">Add</button>
+                </div>
+                <div class="sort-buttons">
+                    <button id="sortActive" class="btn-sort">Sort ↓</button>
+                </div>
+                <div class="todo-stats">
+                    <span id="todoStats">0 tasks (0 done)</span>
+                </div>
+                <ul id="todoList" class="todo-list"></ul>
+            </section>
+
+            <!-- Quick Links -->
+            <section class="card links-card">
+                <h2>Quick Links</h2>
+                <div id="linksGrid" class="links-grid"></div>
+                <div class="links-input">
+                    <input type="text" id="linkName" placeholder="Site name">
+                    <input type="url" id="linkUrl" placeholder="URL (e.g., example.com)">
+                    <button id="addLinkBtn">Add Link</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

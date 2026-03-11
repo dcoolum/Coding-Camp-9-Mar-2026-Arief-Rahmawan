@@ -1,0 +1,7 @@
+{
+  "workspace": {
+    "name": "To-Do List Life Dashboard",
+    "description": "A simple dashboard to help organize your day with to-do list, focus timer, and quick links",
+    "version": "1.0.0"
+  }
+}
